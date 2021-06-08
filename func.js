@@ -15,7 +15,6 @@ let openHead = ()=>{
     headButton.removeEventListener('click', openHead)
     headButton.addEventListener('click', closeHead)
 }
-
 let closeHead = ()=>{
     headOverHeals.style.display='none'
     headOverHeals.style.opacity='1';
