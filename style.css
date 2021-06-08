@@ -36,6 +36,8 @@ li{
 #logo-description{
     font-family: 'Great Vibes', cursive !important;
     font-size: 60px;
+    width: 100%;
+    text-align: center;
 }
 
 #change-background{
