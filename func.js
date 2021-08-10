@@ -12,6 +12,7 @@ let openHead = ()=>{
     headOverHeals.style.opacity ='1';
     headButton.innerHTML= 'Close';
     isOpen = false;
+    if(neDarkMode){headButton.style.backgroundColor='white'; headButton.style.color='black'} else {headButton.style.backgroundColor='black', headButton.style.color='white'}
     headButton.removeEventListener('click', openHead)
     headButton.addEventListener('click', closeHead)
 }
@@ -20,6 +21,7 @@ let closeHead = ()=>{
     headOverHeals.style.opacity='1';
     headButton.innerHTML = 'Show'
     isOpen=true;
+    if(neDarkMode){headButton.style.backgroundColor='white'} else {headButton.style.backgroundColor='black'}
     headButton.removeEventListener('click', closeHead)
     headButton.addEventListener('click', openHead)
 }
@@ -63,6 +65,8 @@ let changeToLight = ()=>{
     changeButton.removeEventListener('click', changeToLight)
     changeButton.addEventListener('click', changeToDark)
 }
+changeToDark()
+if(neDarkMode){headButton.style.backgroundColor='white'; headButton.style.color='black'} else {headButton.style.backgroundColor='black', headButton.style.color='white'}
  isOpen ?  headButton.addEventListener('click', openHead) : headButton.addEventListener('click', closeHead);
  isTeaOpen ?  teaButton.addEventListener('click', openTea) : teaButton.addEventListener('click', closeTea)
  neDarkMode ? changeButton.addEventListener('click', changeToDark) : changeButton.addEventListener('click', changeToLight)
